@@ -4,6 +4,17 @@ import { connect } from 'react-redux'
 
 import { Button } from 'reactstrap'
 
+import styled from 'styled-components'
+
+const StyledCard = styled.div`
+  padding: 20px;
+  border: 1px solid blue;
+  border-radius: 5px;
+  width: 200px;
+  text-align: center;
+  margin: 10px;
+`
+
 const Card = (props) => {
   console.log("Card -> props", props)
   const { character } = props
@@ -17,13 +28,13 @@ const Card = (props) => {
   }
 
   return (
-    <div>
+    <StyledCard>
       <h3>{character.name}</h3>
       <p>{character.age} years old</p>
       <p>{character.height}</p>
       <Button id={character.id} onClick={e => handleDelete(e)} color="danger">Delete</Button>
 
-    </div>
+    </StyledCard>
   )
 }
 
