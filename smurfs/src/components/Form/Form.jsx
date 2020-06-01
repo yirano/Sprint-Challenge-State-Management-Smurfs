@@ -15,7 +15,7 @@ const Form = () => {
       <Input type="text" name="name" value={input.name} onChange={handleChange} placeholder="Name" />
       <Input type="text" name="height" value={input.height} onChange={handleChange} placeholder="Height" />
       <Input type="text" name="age" value={input.age} onChange={handleChange} placeholder="Age" />
-      <Button type="submit">Submit</Button>
+      <Button type="submit" color="primary">Submit</Button>
     </ReactForm>
   )
 }

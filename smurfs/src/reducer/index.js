@@ -18,7 +18,7 @@ export default (state = initialState, { type, payload }) => {
     case ADD_SMURF:
       return { ...state, isLoading: false, error: '' }
     case DELETE_SMURF:
-      return { ...state, data: state.data.filter(d => d.id != payload) }
+      return { data: payload, isLoading: false, error: '' }
     default:
       return state
   }

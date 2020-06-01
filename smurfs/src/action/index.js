@@ -28,7 +28,7 @@ export const deleteSmurf = (id) => {
   return dispatch => {
     axios.delete(`http://localhost:3333/smurfs/${id}`)
       .then(res => {
-        dispatch({ type: DELETE_SMURF, payload: id })
+        dispatch({ type: DELETE_SMURF, payload: res.data })
       })
       .catch(err => console.log('THERE WAS A PROBLEM DELETING SMURF: ', err))
   }

@@ -12,12 +12,17 @@ const Card = (props) => {
     props.deleteSmurf(e.target.id)
   }
 
+  const handleEdit = e => {
+    console.log('edit triggered')
+  }
+
   return (
     <div>
       <h3>{character.name}</h3>
       <p>{character.age} years old</p>
       <p>{character.height}</p>
-      <Button id={character.id} onClick={e => handleDelete(e)}>Delete</Button>
+      <Button id={character.id} onClick={e => handleDelete(e)} color="danger">Delete</Button>
+
     </div>
   )
 }
